@@ -23,6 +23,11 @@ namespace Livraria.Controllers
             return conexao;
         }
 
+        internal static NpgsqlConnection GetConexao()
+        {
+            throw new NotImplementedException();
+        }
+
         public static void setFechaConexao(NpgsqlConnection conexao)
         {
             if (conexao != null)
