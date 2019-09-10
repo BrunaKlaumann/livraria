@@ -23,30 +23,28 @@ namespace Livraria.Controllers
                     int codigoLivro = (int)dr["id_livro"];
                     int codigoAutor = (int)dr["id_autor"];
                     AutorLivro autorLivro = new AutorLivro();
-                    autorLivro.id_autor = codigoLivro;
+                    autorLivro.id_livro = codigoLivro;
                     autorLivro.id_autor = codigoAutor;
                     lista.Add(autorLivro);
 
                 }
             }
-            //Fiz ate aqui o resto para baixo nao fiz nada 
             catch (NpgsqlException erro)
             {
-                Console.WriteLine("Erro ao consultar Cidade." + erro.Message);
+                Console.WriteLine("Erro ao consultar AutorLivro." + erro.Message);
             }
             return lista;
         }
-        public static bool SetIncuiCidade(Cidade cidade)
+        public static bool SetIncuiAutorLivro(AutorLivro autorLivro)
         {
             bool incluiu = false;
             try
             {
                 NpgsqlConnection conexao = Conexao.GetConexao();
-                string sql = "insert into cidade(cid_codigo,nome,est_sigla) values(@codigo,@nome,@sigla)";
+                string sql = "insert into cidade(id_livro, id_autor) values(@codigoLivro, @codigoAutor)";
                 NpgsqlCommand cmd = new NpgsqlCommand(sql, conexao);
-                cmd.Parameters.Add("@codigo", NpgsqlTypes.NpgsqlDbType.Varchar).Value = cidade.cid_codigo;
-                cmd.Parameters.Add("@nome", NpgsqlTypes.NpgsqlDbType.Varchar).Value = cidade.nome;
-                cmd.Parameters.Add("@sigla", NpgsqlTypes.NpgsqlDbType.Varchar).Value = cidade.est_sigla;
+                cmd.Parameters.Add("@codigoLivro", NpgsqlTypes.NpgsqlDbType.Integer).Value = AutorLivro.id_livro;
+                cmd.Parameters.Add("@codigoAutor", NpgsqlTypes.NpgsqlDbType.Integer).Value = AutorLivro.id_autor;
 
                 int valor = cmd.ExecuteNonQuery();
                 if (valor == 1)
@@ -57,21 +55,20 @@ namespace Livraria.Controllers
             }
             catch (NpgsqlException erro)
             {
-                Console.WriteLine("Erro inclusão da cidade " + erro.Message);
+                Console.WriteLine("Erro ao incluir" + erro.Message);
             }
             return incluiu;
         }
-        public static bool SetAlteraCidade(Cidade cidade)
+        public static bool SetAlteraAutorLivro(AutorLivro autorLivro)
         {
             bool alterou = false;
             try
             {
                 NpgsqlConnection conexao = Conexao.GetConexao();
-                string sql = "update cidade set nome=@nome where cid_codigo = @codigo and est_sigla = @sigla";
+                string sql = "update autorLivro set id_livro=@codigoLivro and id_autor=@codigoAutor";
                 NpgsqlCommand cmd = new NpgsqlCommand(sql, conexao);
-                cmd.Parameters.Add("@codigo", NpgsqlTypes.NpgsqlDbType.Varchar).Value = cidade.cid_codigo;
-                cmd.Parameters.Add("@nome", NpgsqlTypes.NpgsqlDbType.Varchar).Value = cidade.nome;
-                cmd.Parameters.Add("@sigla", NpgsqlTypes.NpgsqlDbType.Varchar).Value = cidade.est_sigla;
+                cmd.Parameters.Add("@codigoLivro", NpgsqlTypes.NpgsqlDbType.Integer).Value = AutorLivro.id_livro;
+                cmd.Parameters.Add("@codigoAutor", NpgsqlTypes.NpgsqlDbType.Integer).Value = AutorLivro.id_autor;
                 int valor = cmd.ExecuteNonQuery();
                 if (valor == 1)
                 {
@@ -80,7 +77,7 @@ namespace Livraria.Controllers
             }
             catch (NpgsqlException erro)
             {
-                Console.WriteLine("Erro ao alterar Cidade" + erro.Message);
+                Console.WriteLine("Erro ao alterar" + erro.Message);
 
             }
             return alterou;
