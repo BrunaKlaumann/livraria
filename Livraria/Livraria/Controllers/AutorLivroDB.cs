@@ -43,8 +43,8 @@ namespace Livraria.Controllers
                 NpgsqlConnection conexao = Conexao.GetConexao();
                 string sql = "insert into cidade(id_livro, id_autor) values(@codigoLivro, @codigoAutor)";
                 NpgsqlCommand cmd = new NpgsqlCommand(sql, conexao);
-                cmd.Parameters.Add("@codigoLivro", NpgsqlTypes.NpgsqlDbType.Integer).Value = AutorLivro.id_livro;
-                cmd.Parameters.Add("@codigoAutor", NpgsqlTypes.NpgsqlDbType.Integer).Value = AutorLivro.id_autor;
+                cmd.Parameters.Add("@codigoLivro", NpgsqlTypes.NpgsqlDbType.Integer).Value = autorLivro.id_livro;
+                cmd.Parameters.Add("@codigoAutor", NpgsqlTypes.NpgsqlDbType.Integer).Value = autorLivro.id_autor;
 
                 int valor = cmd.ExecuteNonQuery();
                 if (valor == 1)
@@ -67,8 +67,8 @@ namespace Livraria.Controllers
                 NpgsqlConnection conexao = Conexao.GetConexao();
                 string sql = "update autorLivro set id_livro=@codigoLivro and id_autor=@codigoAutor";
                 NpgsqlCommand cmd = new NpgsqlCommand(sql, conexao);
-                cmd.Parameters.Add("@codigoLivro", NpgsqlTypes.NpgsqlDbType.Integer).Value = AutorLivro.id_livro;
-                cmd.Parameters.Add("@codigoAutor", NpgsqlTypes.NpgsqlDbType.Integer).Value = AutorLivro.id_autor;
+                cmd.Parameters.Add("@codigoLivro", NpgsqlTypes.NpgsqlDbType.Integer).Value = autorLivro.id_livro;
+                cmd.Parameters.Add("@codigoAutor", NpgsqlTypes.NpgsqlDbType.Integer).Value = autorLivro.id_autor;
                 int valor = cmd.ExecuteNonQuery();
                 if (valor == 1)
                 {
@@ -82,27 +82,27 @@ namespace Livraria.Controllers
             }
             return alterou;
         }
-        public static bool SetExcluiCidade(Cidade cidade)
-        {
-            bool excluiu = false;
-            try
-            {
-                NpgsqlConnection conexao = Conexao.GetConexao();
-                string sql = "delete from cidade where cid_codigo = @codigo";
-                NpgsqlCommand cmd = new NpgsqlCommand(sql, conexao);
-                cmd.Parameters.Add("@codigo", NpgsqlTypes.NpgsqlDbType.Varchar).Value = cidade.cid_codigo;
-                int valor = cmd.ExecuteNonQuery();
-                if (valor == 1)
-                {
-                    excluiu = true;
-                }
-            }
-            catch (NpgsqlException erro)
-            {
-                Console.WriteLine("Erro ao excluir Cidade" + erro.Message);
-            }
-            return excluiu;
-        }
+        //public static bool SetExcluiCidade(Cidade cidade)
+        //{
+        //    bool excluiu = false;
+        //    try
+        //    {
+        //        NpgsqlConnection conexao = Conexao.GetConexao();
+        //        string sql = "delete from cidade where cid_codigo = @codigo";
+        //        NpgsqlCommand cmd = new NpgsqlCommand(sql, conexao);
+        //        cmd.Parameters.Add("@codigo", NpgsqlTypes.NpgsqlDbType.Varchar).Value = cidade.cid_codigo;
+        //        int valor = cmd.ExecuteNonQuery();
+        //        if (valor == 1)
+        //        {
+        //            excluiu = true;
+        //        }
+        //    }
+        //    catch (NpgsqlException erro)
+        //    {
+        //        Console.WriteLine("Erro ao excluir Cidade" + erro.Message);
+        //    }
+        //    return excluiu;
+        //}
 
     }
 }

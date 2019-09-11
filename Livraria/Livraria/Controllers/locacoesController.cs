@@ -26,28 +26,29 @@ namespace Livraria.Controllers
             lista.Add(locacoes);
             return "Locacao incluída com Sucesso!";
         }
-        [AcceptVerbs("PUT")]
-        public string PutLocacoes(Locacoes locacoes)
-        {
-            //Fiz ate aqui
-            lista.Where(l => l.id_autor == autores.id_autor)
-                .Select(o => {
-                    o.nome = autores.nome;
-                    o.id_autor = autores.id_autor;
-                    return o;
-                })
-                .ToList();
-            return " Autor alterado com Sucesso!";
-        }
 
-        [AcceptVerbs("DELETE")]
-        public string DeleteAutores(Autores autores)
-        {
-            Autores auxautores = lista.Where(l => l.id_autor == autores.id_autor)
-                    .Select(o => o)
-                    .First();
-            lista.Remove(auxautores);
-            return "Autor excluido com sucesso!";
-        }
+        //[AcceptVerbs("PUT")]
+        //public string PutLocacoes(Locacoes locacoes)
+        //{
+        //    //Fiz ate aqui
+        //    lista.Where(l => l.id_autor == autores.id_autor)
+        //        .Select(o => {
+        //            o.nome = autores.nome;
+        //            o.id_autor = autores.id_autor;
+        //            return o;
+        //        })
+        //        .ToList();
+        //    return " Autor alterado com Sucesso!";
+        //}
+
+        //[AcceptVerbs("DELETE")]
+        //public string DeleteAutores(Autores autores)
+        //{
+        //    Autores auxautores = lista.Where(l => l.id_autor == autores.id_autor)
+        //            .Select(o => o)
+        //            .First();
+        //    lista.Remove(auxautores);
+        //    return "Autor excluido com sucesso!";
+        //}
     }
 }
