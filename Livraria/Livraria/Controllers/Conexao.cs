@@ -8,7 +8,7 @@ namespace Livraria.Controllers
 {
     public class Conexao
     {
-        public static NpgsqlConnection getConexao()
+        public static NpgsqlConnection GetConexao()
         {
             NpgsqlConnection conexao = null;
             try
@@ -21,11 +21,6 @@ namespace Livraria.Controllers
                 Console.WriteLine("Erro de conexão: " + erro.Message);
             }
             return conexao;
-        }
-
-        internal static NpgsqlConnection GetConexao()
-        {
-            throw new NotImplementedException();
         }
 
         public static void setFechaConexao(NpgsqlConnection conexao)

@@ -12,41 +12,28 @@ namespace Livraria.Controllers
     [ApiController]
     public class AutoresController : ControllerBase
     {
-        public static List<Autores> lista = new List<Autores>();
-
         [AcceptVerbs("GET")]
         public List<Autores> GetAutores()
         {
-            return lista;
+            return AutoresDB.GetAutores();
         }
 
         [AcceptVerbs("POST")]
-        public string PostAutores(Autores autores)
+        public string PostAutores(Autores autor)
         {
-            lista.Add(autores);
-            return "Autor incluído com Sucesso!";
+            return AutoresDB.SetIncuiAutores(autor);
         }
+
         [AcceptVerbs("PUT")]
-        public string PutAutores(Autores autores)
+        public bool PutAutores(Autores autor)
         {
-            lista.Where(l => l.id_autor== autores.id_autor)
-                .Select(o => {
-                    o.nome = autores.nome;
-                    o.id_autor = autores.id_autor;
-                    return o;
-                })
-                .ToList();
-            return " Autor alterado com Sucesso!";
+            return AutoresDB.SetAlteraAutores(autor);
         }
 
         [AcceptVerbs("DELETE")]
-        public string DeleteAutores(Autores autores)
+        public bool DeleteAutores(Autores autor)
         {
-            Autores auxautores = lista.Where(l => l.id_autor == autores.id_autor)
-                    .Select(o => o)
-                    .First();
-            lista.Remove(auxautores);
-            return "Autor excluido com sucesso!";
+            return AutoresDB.SetExcluiAutores(autor);
         }
     }
 }
