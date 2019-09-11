@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Livraria.Controllers
 {
-    public class livrosDB
+    public class LivrosDB
     {
         public static List<Livros> GetLivros()
         {

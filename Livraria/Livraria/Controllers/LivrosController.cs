@@ -16,19 +16,19 @@ namespace Livraria.Controllers
         [AcceptVerbs("GET")]
         public List<Livros> GetLivros()
         {
-            return livrosDB.GetLivros();
+            return LivrosDB.GetLivros();
         }
 
         [AcceptVerbs("POST")]
         public bool PostLivros(Livros livro)
         {
-            return livrosDB.SetIncuiLivros(livro);
+            return LivrosDB.SetIncuiLivros(livro);
         }
 
         [AcceptVerbs("PUT")]
         public string PutLivros(Livros livro)
         {
-            bool alterou = livrosDB.SetAlteraLivros(livro);
+            bool alterou = LivrosDB.SetAlteraLivros(livro);
             if (alterou)
             {
                 return "Livros alterados com sucesso!";
@@ -43,7 +43,7 @@ namespace Livraria.Controllers
         [AcceptVerbs("DELETE")]
         public string DeleteLivros(Livros livro)
         {
-            bool excluiu = livrosDB.SetExcluiLivros(livro);
+            bool excluiu = LivrosDB.SetExcluiLivros(livro);
             if (excluiu)
             {
                 return "Livro excluído com sucesso!";
