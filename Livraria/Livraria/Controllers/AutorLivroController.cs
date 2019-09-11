@@ -12,43 +12,22 @@ namespace Livraria.Controllers
     [ApiController]
     public class AutorLivroController : ControllerBase
     {
-        //    public static List<AutorLivro> lista = new List<AutorLivro>();
+        [AcceptVerbs("GET")]
+        public List<AutorLivro> GetAutorLivros()
+        {
+            return AutorLivroDB.GetAutorLivro();
+        }
 
-        //    [AcceptVerbs("GET")]
-        //    public List<AutorLivro> GetAutorLivro()
-        //    {
-        //        return lista;
-        //    }
+        [AcceptVerbs("POST")]
+        public bool PostAutorLivro(AutorLivro autorLivro)
+        {
+            return AutorLivroDB.postAutorLivro(autorLivro);
+        }
 
-        //    [AcceptVerbs("POST")]
-        //    public string PostAutorLivro(AutorLivro autorLivro)
-        //    {
-        //        lista.Add(autorLivro);
-        //        return "Autor incluído com Sucesso!";
-        //    }
-        //    [AcceptVerbs("PUT")]
-        //    public string PutAutorLivro(AutorLivro autorLivro)
-        //        //Mexi ate aqui apenas para baixo s'o ctrl c
-        //    {
-        //        lista.Where(l => l.id_autor == autores.id_autor)
-        //            .Select(o => {
-        //                o.nome = autores.nome;
-        //                o.id_autor = autores.id_autor;
-        //                return o;
-        //            })
-        //            .ToList();
-        //        return " Autor alterado com Sucesso!";
-        //    }
-
-        //    [AcceptVerbs("DELETE")]
-        //    public string DeleteAutores(Autores autores)
-        //    {
-        //        Autores auxautores = lista.Where(l => l.id_autor == autores.id_autor)
-        //                .Select(o => o)
-        //                .First();
-        //        lista.Remove(auxautores);
-        //        return "Autor excluido com sucesso!";
-        //    }
-        //}
+        [AcceptVerbs("DELETE")]
+        public bool DeleteAutorLivro(AutorLivro autorLivro)
+        {
+            return AutorLivroDB.deleteAutorLivro(autorLivro);
+        }
     }
 }
