@@ -12,6 +12,28 @@ namespace Livraria.Controllers
     [ApiController]
     public class LocacoesController : ControllerBase
     {
-        
+        [AcceptVerbs("GET")]
+        public List<Locacoes> GetLocacoes()
+        {
+            return LocacoesDB.GetLocacoes();
+        }
+
+        [AcceptVerbs("POST")]
+        public bool PostLocacao(Locacoes locacao)
+        {
+            return LocacoesDB.postLocacao(locacao);
+        }
+
+        [AcceptVerbs("PUT")]
+        public bool PutLocacao(Locacoes locacao)
+        {
+            return LocacoesDB.putLocacao(locacao);
+        }
+
+        [AcceptVerbs("DELETE")]
+        public bool DeleteLocacao(Locacoes locacao)
+        {
+            return LocacoesDB.deleteLocacao(locacao);
+        }
     }
 }
