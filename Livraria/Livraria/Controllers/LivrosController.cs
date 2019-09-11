@@ -29,24 +29,30 @@ namespace Livraria.Controllers
         [AcceptVerbs("PUT")]
         public string PutLivros(Livros livros)
         {
-            lista.Where(l => l.id_livro == livros.id_livro)
-                .Select(o => {
-                    o.titulo = livros.titulo;
-                    o.id_livro = livros.id_livro;
-                    return o;
-                })
-                .ToList();
-            return " Livro alterado com Sucesso!";
+            bool alterou = livrosDB.SetAlteraLivros(livros);
+            if (alterou)
+            {
+                return "Livros alterados com sucesso!";
+            }
+            else
+            {
+                return "Erro livro não alterado!";
+            }
+
         }
 
         [AcceptVerbs("DELETE")]
         public string DeleteLivros(Livros livros)
         {
-            Livros auxlivros = lista.Where(l => l.id_livro == livros.id_livro)
-                    .Select(o => o)
-                    .First();
-            lista.Remove(auxlivros);
-            return "Livro excluido com sucesso!";
+            bool excluiu = livrosDB.SetExcluiLivros(livros);
+            if (excluiu)
+            {
+                return "Livro excluído com sucesso!";
+            }
+            else
+            {
+                return "Erro livro não excluído!";
+            }
         }
     }
 }
