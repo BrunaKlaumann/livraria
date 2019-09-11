@@ -8,6 +8,6 @@ namespace Livraria.Models
     public class Livros
     {
         public int id_livro { get; set; }
-        public string titulo { get; set; }
+        public string nome { get; set; }
     }
 }

@@ -12,24 +12,23 @@ namespace Livraria.Controllers
     [ApiController]
     public class LivrosController : ControllerBase
     {
-        public static List<Livros> lista = new List<Livros>();
 
         [AcceptVerbs("GET")]
         public List<Livros> GetLivros()
         {
-            return lista;
+            return livrosDB.GetLivros();
         }
 
         [AcceptVerbs("POST")]
-        public string PostLivros(Livros livros)
+        public bool PostLivros(Livros livro)
         {
-            lista.Add(livros);
-            return "Livro incluído com Sucesso!";
+            return livrosDB.SetIncuiLivros(livro);
         }
+
         [AcceptVerbs("PUT")]
-        public string PutLivros(Livros livros)
+        public string PutLivros(Livros livro)
         {
-            bool alterou = livrosDB.SetAlteraLivros(livros);
+            bool alterou = livrosDB.SetAlteraLivros(livro);
             if (alterou)
             {
                 return "Livros alterados com sucesso!";
@@ -42,9 +41,9 @@ namespace Livraria.Controllers
         }
 
         [AcceptVerbs("DELETE")]
-        public string DeleteLivros(Livros livros)
+        public string DeleteLivros(Livros livro)
         {
-            bool excluiu = livrosDB.SetExcluiLivros(livros);
+            bool excluiu = livrosDB.SetExcluiLivros(livro);
             if (excluiu)
             {
                 return "Livro excluído com sucesso!";

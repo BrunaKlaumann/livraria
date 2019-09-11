@@ -15,36 +15,34 @@ namespace Livraria.Controllers
             try
             {
                 NpgsqlConnection conexao = Conexao.GetConexao();
-                string sql = "select * from Livros";
+                string sql = "SELECT * FROM livros";
                 NpgsqlCommand cmd = new NpgsqlCommand(sql, conexao);
                 NpgsqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    int codigo = (int)dr["id_livros"];
-                    string titulo = (string)dr["titulo"];
+                    int codigo = (int)dr["id_livro"];
+                    string nome = (string)dr["nome"];
                     Livros livros = new Livros();
-                    livros.id_livro= codigo;
-                    livros.titulo = titulo;
+                    livros.id_livro = codigo;
+                    livros.nome = nome;
                     lista.Add(livros);
-
                 }
             }
             catch (NpgsqlException erro)
             {
-                Console.WriteLine("Erro ao consultar Livros." + erro.Message);
+                Console.WriteLine("Erro ao consultar Livros. " + erro.Message);
             }
             return lista;
         }
-        public static bool SetIncuiLivros(Livros livros)
+        public static bool SetIncuiLivros(Livros livro)
         {
             bool incluiu = false;
             try
             {
                 NpgsqlConnection conexao = Conexao.GetConexao();
-                string sql = "insert into livros(id_livro,titulo) values(@codigo,@titulo)";
+                string sql = "INSERT INTO livros(nome) VALUES(@nome)";
                 NpgsqlCommand cmd = new NpgsqlCommand(sql, conexao);
-                cmd.Parameters.Add("@codigo", NpgsqlTypes.NpgsqlDbType.Varchar).Value = livros.id_livro;
-                cmd.Parameters.Add("@titulo", NpgsqlTypes.NpgsqlDbType.Varchar).Value = livros.titulo;
+                cmd.Parameters.AddWithValue("@nome", livro.nome);
 
                 int valor = cmd.ExecuteNonQuery();
                 if (valor == 1)
@@ -59,17 +57,16 @@ namespace Livraria.Controllers
             }
             return incluiu;
         }
-        public static bool SetAlteraLivros(Livros livros)
+        public static bool SetAlteraLivros(Livros livro)
         {
             bool alterou = false;
             try
             {
-                //verifivar linha de update livros set ...... se der pau.
                 NpgsqlConnection conexao = Conexao.GetConexao();
-                string sql = "update livros set id_livro=@codigo and titulo=@titulo";
+                string sql = "UPDATE livros SET nome = @nome WHERE id_livro = @codigo";
                 NpgsqlCommand cmd = new NpgsqlCommand(sql, conexao);
-                cmd.Parameters.Add("@codigo", NpgsqlTypes.NpgsqlDbType.Varchar).Value = livros.id_livro;
-                cmd.Parameters.Add("@titulo", NpgsqlTypes.NpgsqlDbType.Varchar).Value = livros.titulo;
+                cmd.Parameters.AddWithValue("@codigo", livro.id_livro);
+                cmd.Parameters.AddWithValue("@nome", livro.nome);
                 int valor = cmd.ExecuteNonQuery();
                 if (valor == 1)
                 {
@@ -78,20 +75,20 @@ namespace Livraria.Controllers
             }
             catch (NpgsqlException erro)
             {
-                Console.WriteLine("Erro ao alterar Livro" + erro.Message);
+                Console.WriteLine("Erro ao alterar Livro " + erro.Message);
 
             }
             return alterou;
         }
-        public static bool SetExcluiLivros(Livros livros)
+        public static bool SetExcluiLivros(Livros livro)
         {
             bool excluiu = false;
             try
             {
                 NpgsqlConnection conexao = Conexao.GetConexao();
-                string sql = "delete from livros where id_livro=@codigo";
+                string sql = "DELETE FROM livros WHERE id_livro=@codigo";
                 NpgsqlCommand cmd = new NpgsqlCommand(sql, conexao);
-                cmd.Parameters.Add("@codigo", NpgsqlTypes.NpgsqlDbType.Varchar).Value = livros.id_livro;
+                cmd.Parameters.AddWithValue("@codigo", livro.id_livro);
                 int valor = cmd.ExecuteNonQuery();
                 if (valor == 1)
                 {
@@ -100,7 +97,7 @@ namespace Livraria.Controllers
             }
             catch (NpgsqlException erro)
             {
-                Console.WriteLine("Erro ao excluir Livro" + erro.Message);
+                Console.WriteLine("Erro ao excluir Livro " + erro.Message);
             }
             return excluiu;
         }
