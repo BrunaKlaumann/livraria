@@ -25,6 +25,7 @@ namespace Livraria.Controllers
                     usuario.nome = (string)dr["nome"];
                     lista.Add(usuario);
                 }
+                Conexao.setFechaConexao(conexao);
             }
             catch (NpgsqlException erro)
             {
@@ -45,6 +46,7 @@ namespace Livraria.Controllers
                 cmd.Parameters.AddWithValue("@nome", usuario.nome);
 
                 incluidos = cmd.ExecuteNonQuery();
+                Conexao.setFechaConexao(conexao);
             }
             catch (NpgsqlException erro)
             {
@@ -76,6 +78,7 @@ namespace Livraria.Controllers
                 {
                     alterou = true;
                 }
+                Conexao.setFechaConexao(conexao);
             }
             catch (NpgsqlException erro)
             {
@@ -99,6 +102,7 @@ namespace Livraria.Controllers
                 {
                     excluiu = true;
                 }
+                Conexao.setFechaConexao(conexao);
             }
             catch (NpgsqlException erro)
             {

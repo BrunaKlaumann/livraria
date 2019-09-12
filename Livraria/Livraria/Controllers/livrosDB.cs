@@ -27,6 +27,7 @@ namespace Livraria.Controllers
                     livros.nome = nome;
                     lista.Add(livros);
                 }
+                Conexao.setFechaConexao(conexao);
             }
             catch (NpgsqlException erro)
             {
@@ -49,7 +50,7 @@ namespace Livraria.Controllers
                 {
                     incluiu = true;
                 }
-
+                Conexao.setFechaConexao(conexao);
             }
             catch (NpgsqlException erro)
             {
@@ -72,6 +73,7 @@ namespace Livraria.Controllers
                 {
                     alterou = true;
                 }
+                Conexao.setFechaConexao(conexao);
             }
             catch (NpgsqlException erro)
             {
@@ -94,6 +96,7 @@ namespace Livraria.Controllers
                 {
                     excluiu = true;
                 }
+                Conexao.setFechaConexao(conexao);
             }
             catch (NpgsqlException erro)
             {

@@ -27,6 +27,7 @@ namespace Livraria.Controllers
                     autorLivro.nome_autor = (string)dr["nome_autor"];
                     lista.Add(autorLivro);
                 }
+                Conexao.setFechaConexao(conexao);
             }
             catch (NpgsqlException erro)
             {
@@ -50,6 +51,7 @@ namespace Livraria.Controllers
                 {
                     incluiu = true;
                 }
+                Conexao.setFechaConexao(conexao);
 
             }
             catch (NpgsqlException erro)
@@ -74,6 +76,7 @@ namespace Livraria.Controllers
                 {
                     excluiu = true;
                 }
+                Conexao.setFechaConexao(conexao);
             }
             catch (NpgsqlException erro)
             {

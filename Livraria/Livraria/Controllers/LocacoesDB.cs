@@ -31,6 +31,7 @@ namespace Livraria.Controllers
                     locacao.data_locacao = (DateTime)dr["data_locacao"];
                     lista.Add(locacao);
                 }
+                Conexao.setFechaConexao(conexao);
             }
             catch (NpgsqlException erro)
             {
@@ -58,7 +59,7 @@ namespace Livraria.Controllers
                 {
                     incluiu = true;
                 }
-
+                Conexao.setFechaConexao(conexao);
             }
             catch (NpgsqlException erro)
             {
@@ -86,6 +87,7 @@ namespace Livraria.Controllers
                 {
                     alterou = true;
                 }
+                Conexao.setFechaConexao(conexao);
             }
             catch (NpgsqlException erro)
             {
@@ -109,6 +111,7 @@ namespace Livraria.Controllers
                 {
                     excluiu = true;
                 }
+                Conexao.setFechaConexao(conexao);
             }
             catch (NpgsqlException erro)
             {
