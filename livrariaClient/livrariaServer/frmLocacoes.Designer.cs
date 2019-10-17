@@ -38,14 +38,14 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(473, 230);
+            this.dataGridView1.Size = new System.Drawing.Size(874, 230);
             this.dataGridView1.TabIndex = 7;
             // 
             // excluir
             // 
-            this.excluir.Location = new System.Drawing.Point(424, 257);
+            this.excluir.Location = new System.Drawing.Point(174, 257);
             this.excluir.Name = "excluir";
             this.excluir.Size = new System.Drawing.Size(75, 23);
             this.excluir.TabIndex = 6;
@@ -54,7 +54,7 @@
             // 
             // alterar
             // 
-            this.alterar.Location = new System.Drawing.Point(226, 257);
+            this.alterar.Location = new System.Drawing.Point(93, 257);
             this.alterar.Name = "alterar";
             this.alterar.Size = new System.Drawing.Size(75, 23);
             this.alterar.TabIndex = 5;
@@ -63,7 +63,7 @@
             // 
             // cadastrar
             // 
-            this.cadastrar.Location = new System.Drawing.Point(26, 257);
+            this.cadastrar.Location = new System.Drawing.Point(12, 257);
             this.cadastrar.Name = "cadastrar";
             this.cadastrar.Size = new System.Drawing.Size(75, 23);
             this.cadastrar.TabIndex = 4;
@@ -74,7 +74,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 292);
+            this.ClientSize = new System.Drawing.Size(898, 292);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.excluir);
             this.Controls.Add(this.alterar);

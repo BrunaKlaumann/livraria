@@ -30,9 +30,12 @@ namespace Livraria.Controllers
             return UsuarioDB.putUsuario(usuario);
         }
 
-        [AcceptVerbs("DELETE")]
-        public bool DeleteUsuario(Usuario usuario)
+        [HttpDelete]
+        [Route("{id_usuario}")]
+        public bool DeleteUsuario(int id_usuario)
         {
+            Usuario usuario = new Usuario();
+            usuario.id_usuario = id_usuario;
             return UsuarioDB.deleteUsuario(usuario);
         }
     }

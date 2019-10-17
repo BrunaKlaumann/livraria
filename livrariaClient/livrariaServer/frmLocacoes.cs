@@ -1,4 +1,6 @@
-﻿using System;
+﻿using livrariaServer.Controllers;
+using livrariaServer.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,13 @@ namespace livrariaServer
         public frmLocacoes()
         {
             InitializeComponent();
+            this.AtualizaTela();
+        }
+
+        private async void AtualizaTela()
+        {
+            List<Locacao> lista = await LocacaoServices.GetLocacoes();
+            dataGridView1.DataSource = lista;
         }
     }
 }

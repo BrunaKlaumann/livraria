@@ -25,5 +25,34 @@ namespace livrariaServer
             List<Usuario> lista = await UsuarioServices.GetUsuarios();
             dataGridView1.DataSource = lista;
         }
+
+        private void Cadastrar_Click(object sender, EventArgs e)
+        {
+            frmAddUsuario frm = new frmAddUsuario();
+            frm.ShowDialog();
+            AtualizaTela();
+        }
+
+        private async void Excluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Usuario usuario = (Usuario)dataGridView1.SelectedRows[0].DataBoundItem;
+                string retorno = await UsuarioServices.DeleteUsuario(usuario);
+                if (retorno == "OK")
+                {
+                    MessageBox.Show("Excluído com sucesso!");
+                    AtualizaTela();
+                }
+                else
+                {
+                    MessageBox.Show("Erro na exclusão!");
+                }
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                MessageBox.Show("Selecione a linha inteira para realizar a exclusão!");
+            }
+        }
     }
 }
