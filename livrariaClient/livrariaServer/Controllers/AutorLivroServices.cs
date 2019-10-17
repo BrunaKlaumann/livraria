@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Http;
 
 namespace livrariaServer.Controllers
 {
@@ -24,6 +25,26 @@ namespace livrariaServer.Controllers
             lista = JsonConvert.DeserializeObject<List<AutorLivro>>(await respose.Content.ReadAsStringAsync());
 
             return lista;
+        }
+
+        public static async Task<string> PostDados([FromBody] AutorLivro autorLivro)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://localhost:44306/api/");
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client.Timeout = new TimeSpan(0, 0, 30);
+            HttpResponseMessage response = await client.PostAsJsonAsync("autorlivro", autorLivro);
+            return response.StatusCode.ToString();
+        }
+
+        public static async Task<string> DeleteDados(AutorLivro autorLivro)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://localhost:44306/api/");
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client.Timeout = new TimeSpan(0, 0, 30);
+            HttpResponseMessage response = await client.PostAsJsonAsync("autorlivro/delete", autorLivro);
+            return response.StatusCode.ToString();
         }
     }
 }

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnAdicionar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAdicionar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,26 +53,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(672, 261);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // btnAdicionar
-            // 
-            this.btnAdicionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAdicionar.Location = new System.Drawing.Point(12, 280);
-            this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(75, 23);
-            this.btnAdicionar.TabIndex = 1;
-            this.btnAdicionar.Text = "Adicionar";
-            this.btnAdicionar.UseVisualStyleBackColor = true;
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnExcluir.Location = new System.Drawing.Point(93, 280);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
-            this.btnExcluir.TabIndex = 2;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
             // 
             // Column1
             // 
@@ -107,6 +87,28 @@
             this.Column4.HeaderText = "Livro";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            // 
+            // btnAdicionar
+            // 
+            this.btnAdicionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAdicionar.Location = new System.Drawing.Point(12, 280);
+            this.btnAdicionar.Name = "btnAdicionar";
+            this.btnAdicionar.Size = new System.Drawing.Size(75, 23);
+            this.btnAdicionar.TabIndex = 1;
+            this.btnAdicionar.Text = "Adicionar";
+            this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.BtnAdicionar_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnExcluir.Location = new System.Drawing.Point(93, 280);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.TabIndex = 2;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
             // frmAutorLivro
             // 

@@ -24,7 +24,8 @@ namespace Livraria.Controllers
             return AutorLivroDB.postAutorLivro(autorLivro);
         }
 
-        [AcceptVerbs("DELETE")]
+        [AcceptVerbs("POST")]
+        [Route("delete")]
         public bool DeleteAutorLivro(AutorLivro autorLivro)
         {
             return AutorLivroDB.deleteAutorLivro(autorLivro);
