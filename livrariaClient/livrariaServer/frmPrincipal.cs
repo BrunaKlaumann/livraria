@@ -45,5 +45,11 @@ namespace livrariaServer
             frmLocacoes frm = new frmLocacoes();
             frm.ShowDialog();
         }
+
+        private void BtnLivroAutor_Click(object sender, EventArgs e)
+        {
+            frmAutorLivro frm = new frmAutorLivro();
+            frm.ShowDialog();
+        }
     }
 }

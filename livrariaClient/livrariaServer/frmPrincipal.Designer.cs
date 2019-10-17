@@ -37,7 +37,7 @@
             // 
             // livros
             // 
-            this.livros.Location = new System.Drawing.Point(40, 70);
+            this.livros.Location = new System.Drawing.Point(12, 12);
             this.livros.Name = "livros";
             this.livros.Size = new System.Drawing.Size(75, 23);
             this.livros.TabIndex = 0;
@@ -47,7 +47,9 @@
             // 
             // autores
             // 
-            this.autores.Location = new System.Drawing.Point(171, 70);
+            this.autores.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.autores.Location = new System.Drawing.Point(93, 12);
             this.autores.Name = "autores";
             this.autores.Size = new System.Drawing.Size(75, 23);
             this.autores.TabIndex = 1;
@@ -57,7 +59,9 @@
             // 
             // usuarios
             // 
-            this.usuarios.Location = new System.Drawing.Point(40, 194);
+            this.usuarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.usuarios.Location = new System.Drawing.Point(93, 41);
             this.usuarios.Name = "usuarios";
             this.usuarios.Size = new System.Drawing.Size(75, 23);
             this.usuarios.TabIndex = 2;
@@ -67,7 +71,8 @@
             // 
             // locacoes
             // 
-            this.locacoes.Location = new System.Drawing.Point(40, 136);
+            this.locacoes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.locacoes.Location = new System.Drawing.Point(12, 41);
             this.locacoes.Name = "locacoes";
             this.locacoes.Size = new System.Drawing.Size(75, 23);
             this.locacoes.TabIndex = 3;
@@ -77,18 +82,20 @@
             // 
             // btnLivroAutor
             // 
-            this.btnLivroAutor.Location = new System.Drawing.Point(171, 136);
+            this.btnLivroAutor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLivroAutor.Location = new System.Drawing.Point(174, 12);
             this.btnLivroAutor.Name = "btnLivroAutor";
             this.btnLivroAutor.Size = new System.Drawing.Size(75, 23);
             this.btnLivroAutor.TabIndex = 4;
             this.btnLivroAutor.Text = "Livro/Autor";
             this.btnLivroAutor.UseVisualStyleBackColor = true;
+            this.btnLivroAutor.Click += new System.EventHandler(this.BtnLivroAutor_Click);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(298, 249);
+            this.ClientSize = new System.Drawing.Size(258, 74);
             this.Controls.Add(this.btnLivroAutor);
             this.Controls.Add(this.locacoes);
             this.Controls.Add(this.usuarios);

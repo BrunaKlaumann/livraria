@@ -40,9 +40,13 @@ namespace Livraria.Controllers
 
         }
 
-        [AcceptVerbs("DELETE")]
-        public string DeleteLivros(Livros livro)
+        [HttpDelete]
+        [Route("{id_livro}")]
+        public string DeleteLivros(int id_livro)
         {
+            Livros livro = new Livros();
+            livro.id_livro = id_livro;
+
             bool excluiu = LivrosDB.SetExcluiLivros(livro);
             if (excluiu)
             {

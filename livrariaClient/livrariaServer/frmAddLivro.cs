@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace livrariaServer
 {
-    public partial class frmAddAutor : Form
+    public partial class frmAddLivro : Form
     {
-        public frmAddAutor()
+        public frmAddLivro()
         {
             InitializeComponent();
         }
@@ -24,20 +24,20 @@ namespace livrariaServer
             Close();
         }
 
-        private async void BtnCriar_Click(object sender, EventArgs e)
+        private async void BtnAdicionar_Click(object sender, EventArgs e)
         {
-            Autor autor = new Autor();
-            autor.nome = txtNomeAutor.Text;
+            Livro livro = new Livro();
+            livro.nome = txtNomeLivro.Text;
 
-            string resposta = await AutorServices.PostAutor(autor);
+            string resposta = await LivroServices.PostLivro(livro);
             if (resposta == "OK")
             {
-                MessageBox.Show("Autor adicionado com sucesso!");
+                MessageBox.Show("Livro adicionado com sucesso!");
                 Close();
             }
             else
             {
-                MessageBox.Show("Erro ao adicionar autor!");
+                MessageBox.Show("Erro ao adicionar Livro!");
             }
         }
     }

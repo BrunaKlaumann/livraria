@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -66,6 +81,12 @@
     <Compile Include="frmAddAutor.Designer.cs">
       <DependentUpon>frmAddAutor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddLivro.Designer.cs">
+      <DependentUpon>frmAddLivro.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +98,12 @@
     </Compile>
     <Compile Include="frmAutores.Designer.cs">
       <DependentUpon>frmAutores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAutorLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAutorLivro.Designer.cs">
+      <DependentUpon>frmAutorLivro.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
@@ -112,11 +139,17 @@
     <EmbeddedResource Include="frmAddAutor.resx">
       <DependentUpon>frmAddAutor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddLivro.resx">
+      <DependentUpon>frmAddLivro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddUsuario.resx">
       <DependentUpon>frmAddUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAutores.resx">
       <DependentUpon>frmAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAutorLivro.resx">
+      <DependentUpon>frmAutorLivro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLivros.resx">
       <DependentUpon>frmLivros.cs</DependentUpon>
@@ -155,6 +188,18 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
