@@ -60,6 +60,12 @@
     <Compile Include="Controllers\LivroServices.cs" />
     <Compile Include="Controllers\LocacaoServices.cs" />
     <Compile Include="Controllers\UsuarioServices.cs" />
+    <Compile Include="frmAddAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddAutor.Designer.cs">
+      <DependentUpon>frmAddAutor.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     <Compile Include="frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmAddAutor.resx">
+      <DependentUpon>frmAddAutor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddUsuario.resx">
       <DependentUpon>frmAddUsuario.cs</DependentUpon>
     </EmbeddedResource>

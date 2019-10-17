@@ -30,9 +30,12 @@ namespace Livraria.Controllers
             return AutoresDB.SetAlteraAutores(autor);
         }
 
-        [AcceptVerbs("DELETE")]
-        public bool DeleteAutores(Autores autor)
+        [HttpDelete]
+        [Route("{id_autor}")]
+        public bool DeleteAutores(int id_autor)
         {
+            Autores autor = new Autores();
+            autor.id_autor = id_autor;
             return AutoresDB.SetExcluiAutores(autor);
         }
     }

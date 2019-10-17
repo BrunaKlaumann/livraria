@@ -50,8 +50,8 @@
             // 
             // alterar
             // 
-            this.alterar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.alterar.Location = new System.Drawing.Point(213, 258);
+            this.alterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.alterar.Location = new System.Drawing.Point(94, 258);
             this.alterar.Name = "alterar";
             this.alterar.Size = new System.Drawing.Size(75, 23);
             this.alterar.TabIndex = 1;
@@ -60,8 +60,8 @@
             // 
             // excluir
             // 
-            this.excluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.excluir.Location = new System.Drawing.Point(411, 258);
+            this.excluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.excluir.Location = new System.Drawing.Point(175, 257);
             this.excluir.Name = "excluir";
             this.excluir.Size = new System.Drawing.Size(75, 23);
             this.excluir.TabIndex = 2;
