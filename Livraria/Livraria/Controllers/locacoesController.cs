@@ -30,9 +30,12 @@ namespace Livraria.Controllers
             return LocacoesDB.putLocacao(locacao);
         }
 
-        [AcceptVerbs("DELETE")]
-        public bool DeleteLocacao(Locacoes locacao)
+        [HttpDelete]
+        [Route("{id_locacao}")]
+        public bool DeleteLocacao(int id_locacao)
         {
+            Locacoes locacao = new Locacoes();
+            locacao.id_locacao = id_locacao;
             return LocacoesDB.deleteLocacao(locacao);
         }
     }

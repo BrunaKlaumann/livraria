@@ -25,5 +25,34 @@ namespace livrariaServer
             List<Locacao> lista = await LocacaoServices.GetLocacoes();
             dataGridView1.DataSource = lista;
         }
+
+        private void Cadastrar_Click(object sender, EventArgs e)
+        {
+            frmAddLocacao frm = new frmAddLocacao();
+            frm.ShowDialog();
+            AtualizaTela();
+        }
+
+        private async void Excluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Locacao locacao = (Locacao)dataGridView1.SelectedRows[0].DataBoundItem;
+                string retorno = await LocacaoServices.DeleteLocacao(locacao);
+                if (retorno == "OK")
+                {
+                    MessageBox.Show("Excluído com sucesso!");
+                    AtualizaTela();
+                }
+                else
+                {
+                    MessageBox.Show("Erro na exclusão!");
+                }
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                MessageBox.Show("Selecione a linha inteira para realizar a exclusão!");
+            }
+        }
     }
 }
