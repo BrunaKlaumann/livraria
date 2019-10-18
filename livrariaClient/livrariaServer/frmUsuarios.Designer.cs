@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.cadastrar = new System.Windows.Forms.Button();
-            this.alterar = new System.Windows.Forms.Button();
             this.excluir = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,20 +47,10 @@
             this.cadastrar.UseVisualStyleBackColor = true;
             this.cadastrar.Click += new System.EventHandler(this.Cadastrar_Click);
             // 
-            // alterar
-            // 
-            this.alterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.alterar.Location = new System.Drawing.Point(94, 258);
-            this.alterar.Name = "alterar";
-            this.alterar.Size = new System.Drawing.Size(75, 23);
-            this.alterar.TabIndex = 1;
-            this.alterar.Text = "Alterar";
-            this.alterar.UseVisualStyleBackColor = true;
-            // 
             // excluir
             // 
             this.excluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.excluir.Location = new System.Drawing.Point(175, 257);
+            this.excluir.Location = new System.Drawing.Point(94, 258);
             this.excluir.Name = "excluir";
             this.excluir.Size = new System.Drawing.Size(75, 23);
             this.excluir.TabIndex = 2;
@@ -82,9 +71,9 @@
             this.Column2});
             this.dataGridView1.Location = new System.Drawing.Point(13, 13);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(473, 230);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellEndEdit);
             // 
             // Column1
             // 
@@ -102,7 +91,6 @@
             this.Column2.FillWeight = 80F;
             this.Column2.HeaderText = "Nome";
             this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             // 
             // frmUsuarios
             // 
@@ -111,7 +99,6 @@
             this.ClientSize = new System.Drawing.Size(498, 292);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.excluir);
-            this.Controls.Add(this.alterar);
             this.Controls.Add(this.cadastrar);
             this.Name = "frmUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -124,7 +111,6 @@
         #endregion
 
         private System.Windows.Forms.Button cadastrar;
-        private System.Windows.Forms.Button alterar;
         private System.Windows.Forms.Button excluir;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

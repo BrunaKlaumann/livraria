@@ -54,5 +54,20 @@ namespace livrariaServer
                 MessageBox.Show("Selecione a linha inteira para realizar a exclusão!");
             }
         }
+
+        private async void DataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            Usuario usuario = (Usuario)dataGridView1.CurrentRow.DataBoundItem;
+            string retorno = await UsuarioServices.PutUsuario(usuario);
+            if (retorno == "OK")
+            {
+                MessageBox.Show("Alterado com sucesso!");
+                AtualizaTela();
+            }
+            else
+            {
+                MessageBox.Show("Erro na alteração!");
+            }
+        }
     }
 }
