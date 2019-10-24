@@ -178,6 +178,7 @@
             this.Controls.Add(this.comboBoxUsuario);
             this.Controls.Add(this.label1);
             this.Name = "frmAddLocacao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adicionar Locacao";
             this.ResumeLayout(false);
             this.PerformLayout();

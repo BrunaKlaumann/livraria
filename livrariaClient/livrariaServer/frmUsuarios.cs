@@ -61,7 +61,7 @@ namespace livrariaServer
             string retorno = await UsuarioServices.PutUsuario(usuario);
             if (retorno == "OK")
             {
-                MessageBox.Show("Alterado com sucesso!");
+                //MessageBox.Show("Alterado com sucesso!");
                 AtualizaTela();
             }
             else

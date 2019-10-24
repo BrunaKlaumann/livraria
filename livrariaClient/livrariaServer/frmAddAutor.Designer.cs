@@ -80,6 +80,7 @@
             this.Controls.Add(this.txtNomeAutor);
             this.Controls.Add(this.label1);
             this.Name = "frmAddAutor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adicionar Autor";
             this.ResumeLayout(false);
             this.PerformLayout();

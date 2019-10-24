@@ -102,6 +102,7 @@
             this.Controls.Add(this.comboBoxAutor);
             this.Controls.Add(this.label1);
             this.Name = "frmAddAutorLivro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adicionar Autor/Livro";
             this.ResumeLayout(false);
             this.PerformLayout();

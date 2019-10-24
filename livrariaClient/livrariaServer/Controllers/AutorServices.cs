@@ -37,6 +37,16 @@ namespace livrariaServer.Controllers
             return response.StatusCode.ToString();
         }
 
+        public static async Task<string> PutAutor([FromBody] Autor autor)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://localhost:44306/api/");
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client.Timeout = new TimeSpan(0, 0, 30);
+            HttpResponseMessage response = await client.PutAsJsonAsync("autores", autor);
+            return response.StatusCode.ToString();
+        }
+
         public static async Task<string> DeleteAutor(Autor autor)
         {
             HttpClient client = new HttpClient();

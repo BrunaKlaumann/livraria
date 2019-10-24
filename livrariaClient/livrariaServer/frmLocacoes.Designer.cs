@@ -30,7 +30,6 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.excluir = new System.Windows.Forms.Button();
-            this.alterar = new System.Windows.Forms.Button();
             this.cadastrar = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,27 +61,18 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(874, 230);
             this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellEndEdit);
             // 
             // excluir
             // 
             this.excluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.excluir.Location = new System.Drawing.Point(174, 257);
+            this.excluir.Location = new System.Drawing.Point(93, 257);
             this.excluir.Name = "excluir";
             this.excluir.Size = new System.Drawing.Size(75, 23);
             this.excluir.TabIndex = 6;
             this.excluir.Text = "Excluir";
             this.excluir.UseVisualStyleBackColor = true;
             this.excluir.Click += new System.EventHandler(this.Excluir_Click);
-            // 
-            // alterar
-            // 
-            this.alterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.alterar.Location = new System.Drawing.Point(93, 257);
-            this.alterar.Name = "alterar";
-            this.alterar.Size = new System.Drawing.Size(75, 23);
-            this.alterar.TabIndex = 5;
-            this.alterar.Text = "Alterar";
-            this.alterar.UseVisualStyleBackColor = true;
             // 
             // cadastrar
             // 
@@ -109,7 +99,6 @@
             this.Column2.DataPropertyName = "id_usuario";
             this.Column2.HeaderText = "ID Us.";
             this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
@@ -125,7 +114,6 @@
             this.Column4.DataPropertyName = "data_locacao";
             this.Column4.HeaderText = "Data";
             this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
@@ -133,7 +121,6 @@
             this.Column5.DataPropertyName = "data_devolucao";
             this.Column5.HeaderText = "Devolução";
             this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
             // 
             // Column6
             // 
@@ -141,7 +128,6 @@
             this.Column6.DataPropertyName = "id_livro";
             this.Column6.HeaderText = "ID Li.";
             this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
             // 
             // Column7
             // 
@@ -157,7 +143,6 @@
             this.Column8.DataPropertyName = "data_devolvido";
             this.Column8.HeaderText = "Devolvido";
             this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
             // 
             // frmLocacoes
             // 
@@ -166,7 +151,6 @@
             this.ClientSize = new System.Drawing.Size(898, 292);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.excluir);
-            this.Controls.Add(this.alterar);
             this.Controls.Add(this.cadastrar);
             this.Name = "frmLocacoes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -180,7 +164,6 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button excluir;
-        private System.Windows.Forms.Button alterar;
         private System.Windows.Forms.Button cadastrar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

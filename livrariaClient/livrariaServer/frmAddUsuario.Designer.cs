@@ -80,6 +80,7 @@
             this.Controls.Add(this.txtNomeUsuario);
             this.Controls.Add(this.label1);
             this.Name = "frmAddUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adicionar Usuário";
             this.ResumeLayout(false);
             this.PerformLayout();
