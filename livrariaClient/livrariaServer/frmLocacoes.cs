@@ -69,5 +69,15 @@ namespace livrariaServer
                 MessageBox.Show("Erro na alteração!");
             }
         }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void FrmLocacoes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

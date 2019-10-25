@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.excluir = new System.Windows.Forms.Button();
-            this.cadastrar = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.excluir = new System.Windows.Forms.Button();
+            this.cadastrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,31 +47,9 @@
             this.Column2});
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(473, 230);
+            this.dataGridView1.Size = new System.Drawing.Size(545, 176);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellEndEdit);
-            // 
-            // excluir
-            // 
-            this.excluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.excluir.Location = new System.Drawing.Point(93, 248);
-            this.excluir.Name = "excluir";
-            this.excluir.Size = new System.Drawing.Size(75, 23);
-            this.excluir.TabIndex = 6;
-            this.excluir.Text = "Excluir";
-            this.excluir.UseVisualStyleBackColor = true;
-            this.excluir.Click += new System.EventHandler(this.Excluir_Click);
-            // 
-            // cadastrar
-            // 
-            this.cadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cadastrar.Location = new System.Drawing.Point(12, 248);
-            this.cadastrar.Name = "cadastrar";
-            this.cadastrar.Size = new System.Drawing.Size(75, 23);
-            this.cadastrar.TabIndex = 4;
-            this.cadastrar.Text = "Cadastrar";
-            this.cadastrar.UseVisualStyleBackColor = true;
-            this.cadastrar.Click += new System.EventHandler(this.Cadastrar_Click);
             // 
             // Column1
             // 
@@ -90,11 +68,33 @@
             this.Column2.HeaderText = "Nome";
             this.Column2.Name = "Column2";
             // 
+            // excluir
+            // 
+            this.excluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.excluir.Location = new System.Drawing.Point(484, 203);
+            this.excluir.Name = "excluir";
+            this.excluir.Size = new System.Drawing.Size(75, 23);
+            this.excluir.TabIndex = 6;
+            this.excluir.Text = "Excluir";
+            this.excluir.UseVisualStyleBackColor = true;
+            this.excluir.Click += new System.EventHandler(this.Excluir_Click);
+            // 
+            // cadastrar
+            // 
+            this.cadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cadastrar.Location = new System.Drawing.Point(10, 203);
+            this.cadastrar.Name = "cadastrar";
+            this.cadastrar.Size = new System.Drawing.Size(75, 23);
+            this.cadastrar.TabIndex = 4;
+            this.cadastrar.Text = "Cadastrar";
+            this.cadastrar.UseVisualStyleBackColor = true;
+            this.cadastrar.Click += new System.EventHandler(this.Cadastrar_Click);
+            // 
             // frmAutores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 280);
+            this.ClientSize = new System.Drawing.Size(569, 235);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.excluir);
             this.Controls.Add(this.cadastrar);

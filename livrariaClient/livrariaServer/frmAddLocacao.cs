@@ -63,5 +63,10 @@ namespace livrariaServer
                 MessageBox.Show("Erro ao adicionar locação!");
             }
         }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

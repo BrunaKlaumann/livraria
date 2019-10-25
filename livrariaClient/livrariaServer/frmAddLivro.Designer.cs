@@ -47,12 +47,12 @@
             // 
             this.txtNomeLivro.Location = new System.Drawing.Point(12, 25);
             this.txtNomeLivro.Name = "txtNomeLivro";
-            this.txtNomeLivro.Size = new System.Drawing.Size(448, 20);
+            this.txtNomeLivro.Size = new System.Drawing.Size(458, 20);
             this.txtNomeLivro.TabIndex = 1;
             // 
             // btnAdicionar
             // 
-            this.btnAdicionar.Location = new System.Drawing.Point(12, 52);
+            this.btnAdicionar.Location = new System.Drawing.Point(12, 60);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(75, 23);
             this.btnAdicionar.TabIndex = 2;
@@ -62,9 +62,9 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(93, 51);
+            this.btnCancelar.Location = new System.Drawing.Point(386, 63);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(85, 23);
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -74,7 +74,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(472, 87);
+            this.ClientSize = new System.Drawing.Size(482, 95);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.txtNomeLivro);

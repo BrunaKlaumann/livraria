@@ -50,7 +50,7 @@
             this.comboBoxAutor.FormattingEnabled = true;
             this.comboBoxAutor.Location = new System.Drawing.Point(15, 26);
             this.comboBoxAutor.Name = "comboBoxAutor";
-            this.comboBoxAutor.Size = new System.Drawing.Size(329, 21);
+            this.comboBoxAutor.Size = new System.Drawing.Size(350, 21);
             this.comboBoxAutor.TabIndex = 1;
             // 
             // label2
@@ -67,12 +67,13 @@
             this.comboBoxLivro.FormattingEnabled = true;
             this.comboBoxLivro.Location = new System.Drawing.Point(15, 66);
             this.comboBoxLivro.Name = "comboBoxLivro";
-            this.comboBoxLivro.Size = new System.Drawing.Size(329, 21);
+            this.comboBoxLivro.Size = new System.Drawing.Size(350, 21);
             this.comboBoxLivro.TabIndex = 3;
             // 
             // btnAdicionar
             // 
-            this.btnAdicionar.Location = new System.Drawing.Point(15, 93);
+            this.btnAdicionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAdicionar.Location = new System.Drawing.Point(14, 107);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(75, 23);
             this.btnAdicionar.TabIndex = 4;
@@ -82,7 +83,8 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(96, 93);
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.Location = new System.Drawing.Point(290, 107);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 5;
@@ -94,7 +96,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(356, 125);
+            this.ClientSize = new System.Drawing.Size(377, 148);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.comboBoxLivro);

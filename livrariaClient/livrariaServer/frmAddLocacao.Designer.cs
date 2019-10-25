@@ -58,7 +58,7 @@
             this.comboBoxUsuario.FormattingEnabled = true;
             this.comboBoxUsuario.Location = new System.Drawing.Point(15, 26);
             this.comboBoxUsuario.Name = "comboBoxUsuario";
-            this.comboBoxUsuario.Size = new System.Drawing.Size(230, 21);
+            this.comboBoxUsuario.Size = new System.Drawing.Size(367, 21);
             this.comboBoxUsuario.TabIndex = 1;
             // 
             // comboBoxLivro
@@ -66,15 +66,15 @@
             this.comboBoxLivro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxLivro.FormattingEnabled = true;
-            this.comboBoxLivro.Location = new System.Drawing.Point(15, 66);
+            this.comboBoxLivro.Location = new System.Drawing.Point(15, 75);
             this.comboBoxLivro.Name = "comboBoxLivro";
-            this.comboBoxLivro.Size = new System.Drawing.Size(230, 21);
+            this.comboBoxLivro.Size = new System.Drawing.Size(367, 21);
             this.comboBoxLivro.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 50);
+            this.label2.Location = new System.Drawing.Point(12, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 2;
@@ -83,7 +83,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 90);
+            this.label3.Location = new System.Drawing.Point(12, 164);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 13);
             this.label3.TabIndex = 4;
@@ -94,9 +94,9 @@
             this.dateTimePickerLocacao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePickerLocacao.CustomFormat = "";
-            this.dateTimePickerLocacao.Location = new System.Drawing.Point(15, 107);
+            this.dateTimePickerLocacao.Location = new System.Drawing.Point(15, 181);
             this.dateTimePickerLocacao.Name = "dateTimePickerLocacao";
-            this.dateTimePickerLocacao.Size = new System.Drawing.Size(230, 20);
+            this.dateTimePickerLocacao.Size = new System.Drawing.Size(367, 20);
             this.dateTimePickerLocacao.TabIndex = 5;
             this.dateTimePickerLocacao.Value = new System.DateTime(2019, 10, 17, 0, 0, 0, 0);
             // 
@@ -104,16 +104,16 @@
             // 
             this.dateTimePickerDevolucao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePickerDevolucao.Location = new System.Drawing.Point(15, 147);
+            this.dateTimePickerDevolucao.Location = new System.Drawing.Point(15, 221);
             this.dateTimePickerDevolucao.Name = "dateTimePickerDevolucao";
-            this.dateTimePickerDevolucao.Size = new System.Drawing.Size(230, 20);
+            this.dateTimePickerDevolucao.Size = new System.Drawing.Size(367, 20);
             this.dateTimePickerDevolucao.TabIndex = 7;
             this.dateTimePickerDevolucao.Value = new System.DateTime(2019, 10, 17, 0, 0, 0, 0);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 130);
+            this.label4.Location = new System.Drawing.Point(12, 204);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 13);
             this.label4.TabIndex = 6;
@@ -123,16 +123,16 @@
             // 
             this.dateTimePickerDevolvido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePickerDevolvido.Location = new System.Drawing.Point(15, 187);
+            this.dateTimePickerDevolvido.Location = new System.Drawing.Point(15, 261);
             this.dateTimePickerDevolvido.Name = "dateTimePickerDevolvido";
-            this.dateTimePickerDevolvido.Size = new System.Drawing.Size(230, 20);
+            this.dateTimePickerDevolvido.Size = new System.Drawing.Size(367, 20);
             this.dateTimePickerDevolvido.TabIndex = 9;
             this.dateTimePickerDevolvido.Value = new System.DateTime(2019, 10, 17, 0, 0, 0, 0);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 170);
+            this.label5.Location = new System.Drawing.Point(12, 244);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 13);
             this.label5.TabIndex = 8;
@@ -141,7 +141,7 @@
             // btnAdicionar
             // 
             this.btnAdicionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAdicionar.Location = new System.Drawing.Point(15, 213);
+            this.btnAdicionar.Location = new System.Drawing.Point(15, 316);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(75, 23);
             this.btnAdicionar.TabIndex = 10;
@@ -151,8 +151,8 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCancelar.Location = new System.Drawing.Point(96, 213);
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.Location = new System.Drawing.Point(307, 316);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 11;
@@ -164,7 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(265, 246);
+            this.ClientSize = new System.Drawing.Size(394, 365);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.dateTimePickerDevolvido);
@@ -179,7 +179,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmAddLocacao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Adicionar Locacao";
+            this.Text = "Adicionar Locação";
             this.ResumeLayout(false);
             this.PerformLayout();
 

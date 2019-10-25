@@ -37,9 +37,10 @@
             // 
             // livros
             // 
-            this.livros.Location = new System.Drawing.Point(12, 12);
+            this.livros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.livros.Location = new System.Drawing.Point(35, 73);
             this.livros.Name = "livros";
-            this.livros.Size = new System.Drawing.Size(75, 23);
+            this.livros.Size = new System.Drawing.Size(258, 24);
             this.livros.TabIndex = 0;
             this.livros.Text = "Livros";
             this.livros.UseVisualStyleBackColor = true;
@@ -47,11 +48,10 @@
             // 
             // autores
             // 
-            this.autores.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.autores.Location = new System.Drawing.Point(93, 12);
+            this.autores.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.autores.Location = new System.Drawing.Point(35, 27);
             this.autores.Name = "autores";
-            this.autores.Size = new System.Drawing.Size(75, 23);
+            this.autores.Size = new System.Drawing.Size(258, 26);
             this.autores.TabIndex = 1;
             this.autores.Text = "Autores";
             this.autores.UseVisualStyleBackColor = true;
@@ -59,11 +59,10 @@
             // 
             // usuarios
             // 
-            this.usuarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.usuarios.Location = new System.Drawing.Point(93, 41);
+            this.usuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.usuarios.Location = new System.Drawing.Point(35, 200);
             this.usuarios.Name = "usuarios";
-            this.usuarios.Size = new System.Drawing.Size(75, 23);
+            this.usuarios.Size = new System.Drawing.Size(258, 24);
             this.usuarios.TabIndex = 2;
             this.usuarios.Text = "Usuários";
             this.usuarios.UseVisualStyleBackColor = true;
@@ -71,10 +70,10 @@
             // 
             // locacoes
             // 
-            this.locacoes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.locacoes.Location = new System.Drawing.Point(12, 41);
+            this.locacoes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.locacoes.Location = new System.Drawing.Point(35, 159);
             this.locacoes.Name = "locacoes";
-            this.locacoes.Size = new System.Drawing.Size(75, 23);
+            this.locacoes.Size = new System.Drawing.Size(258, 24);
             this.locacoes.TabIndex = 3;
             this.locacoes.Text = "Locações";
             this.locacoes.UseVisualStyleBackColor = true;
@@ -82,10 +81,10 @@
             // 
             // btnLivroAutor
             // 
-            this.btnLivroAutor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLivroAutor.Location = new System.Drawing.Point(174, 12);
+            this.btnLivroAutor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLivroAutor.Location = new System.Drawing.Point(35, 115);
             this.btnLivroAutor.Name = "btnLivroAutor";
-            this.btnLivroAutor.Size = new System.Drawing.Size(75, 23);
+            this.btnLivroAutor.Size = new System.Drawing.Size(258, 24);
             this.btnLivroAutor.TabIndex = 4;
             this.btnLivroAutor.Text = "Livro/Autor";
             this.btnLivroAutor.UseVisualStyleBackColor = true;
@@ -95,7 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(258, 74);
+            this.ClientSize = new System.Drawing.Size(327, 268);
             this.Controls.Add(this.btnLivroAutor);
             this.Controls.Add(this.locacoes);
             this.Controls.Add(this.usuarios);
@@ -103,7 +102,7 @@
             this.Controls.Add(this.livros);
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sistema de controle Livraria";
+            this.Text = "Sistema de Controle Livraria";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 

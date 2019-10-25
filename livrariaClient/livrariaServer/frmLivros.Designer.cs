@@ -47,7 +47,7 @@
             this.Column2});
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(604, 230);
+            this.dataGridView1.Size = new System.Drawing.Size(549, 185);
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellEndEdit);
             // 
@@ -70,8 +70,8 @@
             // 
             // excluir
             // 
-            this.excluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.excluir.Location = new System.Drawing.Point(93, 248);
+            this.excluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.excluir.Location = new System.Drawing.Point(486, 214);
             this.excluir.Name = "excluir";
             this.excluir.Size = new System.Drawing.Size(75, 23);
             this.excluir.TabIndex = 10;
@@ -82,7 +82,7 @@
             // cadastrar
             // 
             this.cadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cadastrar.Location = new System.Drawing.Point(12, 248);
+            this.cadastrar.Location = new System.Drawing.Point(12, 214);
             this.cadastrar.Name = "cadastrar";
             this.cadastrar.Size = new System.Drawing.Size(75, 23);
             this.cadastrar.TabIndex = 8;
@@ -94,13 +94,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 279);
+            this.ClientSize = new System.Drawing.Size(573, 250);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.excluir);
             this.Controls.Add(this.cadastrar);
             this.Name = "frmLivros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "livros";
+            this.Text = "Livros";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

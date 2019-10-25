@@ -39,7 +39,7 @@
             // cadastrar
             // 
             this.cadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cadastrar.Location = new System.Drawing.Point(13, 258);
+            this.cadastrar.Location = new System.Drawing.Point(13, 159);
             this.cadastrar.Name = "cadastrar";
             this.cadastrar.Size = new System.Drawing.Size(75, 23);
             this.cadastrar.TabIndex = 0;
@@ -49,8 +49,8 @@
             // 
             // excluir
             // 
-            this.excluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.excluir.Location = new System.Drawing.Point(94, 258);
+            this.excluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.excluir.Location = new System.Drawing.Point(467, 158);
             this.excluir.Name = "excluir";
             this.excluir.Size = new System.Drawing.Size(75, 23);
             this.excluir.TabIndex = 2;
@@ -71,7 +71,7 @@
             this.Column2});
             this.dataGridView1.Location = new System.Drawing.Point(13, 13);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(473, 230);
+            this.dataGridView1.Size = new System.Drawing.Size(529, 132);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellEndEdit);
             // 
@@ -96,7 +96,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 292);
+            this.ClientSize = new System.Drawing.Size(554, 197);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.excluir);
             this.Controls.Add(this.cadastrar);
